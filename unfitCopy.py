@@ -11,12 +11,12 @@ for i in range(3):
     for file_name in file_names:
         file_path = os.path.join(strlist[i], file_name)  # 添加pic/前缀
         if os.path.exists(file_path):
-            base_name, extension = os.path.splitext(file_path)
+            # base_name, extension = os.path.splitext(file_path)
             base_name_target, extension1 = os.path.splitext(file_name)
-            print(base_name, extension)
+            # print(base_name, extension1)
 
             # 复制文件到另一个文件夹并以原文件名保存
-            shutil.copy(file_path, f'output/{base_name_target}{extension}')
+            shutil.copy(file_path, f'output/{base_name_target}{extension1}')
             print(f'复制文件 {file_name} 到 output 文件夹')
     
 
